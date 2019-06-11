@@ -1,15 +1,13 @@
 import os
-from os.path import abspath
 import numpy as np
 import nibabel as nib
-from nipype import Workflow, Node, MapNode, Function
 from nipype.interfaces import fsl
 from nipype.interfaces.dcm2nii import Dcm2niix
 from nipype.testing import example_data
 import Utils.applyxfm4d
 
 
-#Data directory, include dicom files for multiple patients for all testing
+# Data directory, include dicom files for multiple patients for all testing
 test_dir = '/home/harryzhang/Desktop/test_registration/'
 
 
@@ -306,10 +304,10 @@ applyxfm.inputs.apply_xfm = True
 result = applyxfm.run()
 
 # register with perfusion
-import os
 os.chdir('/home/harryzhang/Desktop/test_registration')
 # either use my customized applyxf4d wrapper for perfusion data or directly run this CMD
-!applyxfm4D pwi_from_dicom.nii.gz r_dwi.nii.gz r_pwi.nii.gz r_transform.mat -singlematrix
+applyXFM_cmd = "applyxfm4D pwi_from_dicom.nii.gz r_dwi.nii.gz r_pwi.nii.gz r_transform.mat -singlematrix"
+os.system(applyXFM_cmd)
 
 # applyxfm4d = applyxfm4d.ApplyXfm4D()
 # applyxfm4d.inputs.in_file = test_dir+'pwi.nii.gz'
