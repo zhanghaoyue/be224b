@@ -73,7 +73,7 @@ keyrings.alt==3.1.1
 kiwisolver==1.1.0
 language-selector==0.1
 louis==3.5.0
-lxml==4.3.3
+lxml==4.6.5
 macaroonbakery==1.2.3
 Mako==1.0.12
 Markdown==3.1.1
