@@ -102,7 +102,7 @@ opencv-python==4.1.0.25
 packaging==19.0
 pandas==0.24.2
 pandocfilters==1.4.2
-paramiko==2.4.2
+paramiko==2.10.1
 parso==0.4.0
 patsy==0.5.1
 pbr==5.2.1
