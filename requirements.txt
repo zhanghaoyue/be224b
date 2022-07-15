@@ -19,7 +19,7 @@ checkbox-support==0.39.0
 citeproc-py==0.4.0
 Click==7.0
 cloudpickle==1.1.1
-codecov==2.0.15
+codecov==2.0.16
 coverage==4.5.3
 cryptography==2.7
 cupshelpers==1.0
